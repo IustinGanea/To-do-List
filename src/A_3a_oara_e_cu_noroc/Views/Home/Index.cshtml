@@ -1,0 +1,41 @@
+﻿@model IEnumerable<A_3a_oara_e_cu_noroc.Model.Iteme>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Elemente Lista</h2>
+        @if (Model.Any())
+        {
+            <table class="table">
+                <tr>
+
+                    <th><i class="glyphicon glyphicon-user"></i>Task</th>
+                    <th><i class="glyphicon glyphicon-lock"></i>Descriere</th>
+                    <th><i class="glyphicon glyphicon-lock"></i>Deadline</th>
+                    <th><i class="glyphicon glyphicon-lock"></i>Terminat?</th>
+
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>@item.nume</td>
+                        <td>@item.descriere</td>
+                        <td>@item.deadline</td>
+                        <td>@item.terminat</td>
+
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p>Nu sunt elemente in lista</p>
+
+        }
+    </div>
+</div>
+

@@ -1,0 +1,23 @@
+﻿@model A_3a_oara_e_cu_noroc.Model.Iteme
+@{
+    ViewData["Title"] = "Sterge";
+}
+
+
+<head>
+    <title> Sterge</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <form asp-controller="Home" asp-action="Sterge" method="post">
+                <label  asp-for="nume">Introdu numele elementului care trebuie sters :</label>
+                <input  asp-for="nume" type="text" class="form-control"  placeholder="Item"  value="item" required> <br />
+                <span asp-validation-for="nume" class="text-danger"></span>
+                <button type="submit" class="btn btn-danger">Sterge</button>
+            </form>
+        </div>
+    </div>
+</body>
+

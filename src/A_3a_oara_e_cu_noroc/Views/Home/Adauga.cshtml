@@ -1,0 +1,51 @@
+﻿@model A_3a_oara_e_cu_noroc.Model.Iteme
+@{
+    ViewData["Title"] = "Adauga";
+}
+
+<head>
+    <title> </title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="col-md-6 ">
+            
+                <div class="form-area">
+                    <div class="center">
+                        <form asp-controller="Home" asp-action="Adauga" method="post">
+                            <br style="clear:both">
+                            <h3 style="margin-bottom: 25px; text-align: center;">Adauga</h3>
+                            <label asp-for="nume">Adauga item:</label>
+
+
+                            <input asp-for="nume" type="text" class="form-control" placeholder="Item" value="item" required>
+                            <span asp-validation-for="nume" class="text-danger"></span>
+                            <label asp-for="descriere" for="modifica">Descriere:</label><br />
+                            <textarea asp-for="descriere" class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                            <span asp-validation-for="descriere" class="text-danger"></span>
+
+                            <label asp-for="terminat" for="Terminat">Terminat:</label><br />
+                           
+                            <label asp-for="terminat" class="checkbox-inline">
+                                <input id="terminat" type="checkbox" value="true" name="terminat">
+                                <input type="hidden" value="false" name="terminat" />DA
+                            </label>
+                            <label asp-for="terminat" class="checkbox-inline">
+                                <input id="terminat" type="checkbox" value="false" name="terminat">
+                                <input type="hidden" value="false" name="terminat" />NU
+                            </label>
+                            <span asp-validation-for="terminat" class="text-danger"></span><br />
+                            <label asp-for="deadline" for="data">Deadline:</label>
+                            <input asp-for="deadline" type="date" class="form-control" name="deadline">
+                            <span asp-validation-for="deadline" class="text-danger"></span>
+                            <br />
+                            <button type="submit" id="submit" name="submit" class="btn btn-primary pull-left">Adauga</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+</body>
